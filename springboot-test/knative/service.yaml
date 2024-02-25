@@ -1,0 +1,19 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello-world-spring
+  namespace: default
+  annotations:
+    serving.knative.dev/rollout-duration: "380s"
+spec:
+  template:
+    spec:
+      containers:
+        - image: ${IMAGE}
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              cpu: 100m
+              memory: 640M
+            limits:
+              cpu: 1

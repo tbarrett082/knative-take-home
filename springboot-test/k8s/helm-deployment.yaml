@@ -1,0 +1,9 @@
+replicaCount: 2
+livenessProbe:
+  path: /actuator/health
+readinessProbe:
+  path: /actuator/health
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 4

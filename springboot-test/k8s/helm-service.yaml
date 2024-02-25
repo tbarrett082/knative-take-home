@@ -1,0 +1,3 @@
+service:
+  name: spring-test-svc
+  port: 8080
