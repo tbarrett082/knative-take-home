@@ -1,9 +1,16 @@
 replicaCount: 2
+image:
+  repository: ghcr.io/tbarrett082/knative-take-home/spring-test
+  tag: ${TAG}
 livenessProbe:
-  path: /actuator/health
+  httpGet:
+    path: /actuator/health
 readinessProbe:
-  path: /actuator/health
+  httpGet:
+    path: /actuator/health
 autoscaling:
   enabled: true
   minReplicas: 2
   maxReplicas: 4
+service:
+  port: 8080
