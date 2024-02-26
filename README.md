@@ -17,7 +17,7 @@ You will need the following to build and deploy locally:
 - "CI/CD" script that will build/test/tag/deploy the application. Will deploy serverless w/ knative or "microservice" w/ helm
 
 ## Build/Deploy Script
-Run `chmod +x ci-cd.sh` in the `springboot-tes` directory. Runthe script and select from the following options:
+Run `chmod +x ci-cd.sh` in the `springboot-test` directory. Runthe script and select from the following options:
 ```
 1. Just build; runs maven and deploys the docker image"
 2. Build and deploy, using knative"
